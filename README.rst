@@ -14,5 +14,9 @@ Pushing Metrics to Go over HTTP
 
 4. Profit
 
+.. note::
+
+    The `metric_store` value **must** be `default` until issue
+    `#896 <https://github.com/praekelt/vumi-go/issues/896>`_ is resolved.
 
 .. image:: screenshot.png
