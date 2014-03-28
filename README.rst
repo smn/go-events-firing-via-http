@@ -3,7 +3,7 @@ Pushing Metrics to Go over HTTP
 
 
 1. Create a jsbox conversation with `config.js` and `reports.js` uploaded.
-2. Create an HTTP conversation.
+2. Create an HTTP (No stream) conversation.
 3. Hit it via curl::
 
     curl -X PUT \
@@ -16,7 +16,12 @@ Pushing Metrics to Go over HTTP
 
 .. note::
 
-    The `metric_store` value **must** be `default` until issue
-    `#896 <https://github.com/praekelt/vumi-go/issues/896>`_ is resolved.
+    This API is exactly the same for the streaming and the non-streaming
+    HTTP APIs. The only difference is in the path of the URL. Use
+    `http_api` for the streaming API and `http_api_nostream` for the non-
+    streaming API.
+
+    Whether or not you have access to either of these depends on your
+    account permissions.
 
 .. image:: screenshot.png
